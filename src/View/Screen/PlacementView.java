@@ -95,8 +95,8 @@ public class PlacementView implements PlacementViewInterface {
     @Override
     public void showPlacementFinished() {
         JOptionPane.showMessageDialog(frame,
-                "Flotte et Pièges prêts ! La bataille commence...",
-                "Déploiement terminé",
+                "Fleet and traps ready! The battle begins...",
+                "Deployment complete",
                 JOptionPane.INFORMATION_MESSAGE);
     }
 
@@ -126,7 +126,7 @@ public class PlacementView implements PlacementViewInterface {
             rotateButton.setText("Pivoter (" + orientationStr + ")");
             rotateButton.setEnabled(size > 1);
         } else {
-            statusLabel.setText("Placement terminé !");
+            statusLabel.setText("Placement complete!");
         }
     }
 }

@@ -181,7 +181,7 @@ public class GameController implements IGameController, IGameControllerCoordinat
         switch (result.status()) {
             case NOT_AVAILABLE -> log("Arme " + type + " indisponible.");
             case INVALID_SUBMARINE -> log("Sous-marin requis pour " + type + ".");
-            case ACTIVATED -> log("Arme " + type + " sélectionnée.");
+            case ACTIVATED -> log("Weapon " + type + " selected.");
         }
     }
 
@@ -231,7 +231,7 @@ public class GameController implements IGameController, IGameControllerCoordinat
     /** Affiche l'écran de fin de partie. */
     @Override
     public void onGameOver(boolean playerWon, int turnCount, int playerAliveBoats, int computerAliveBoats) {
-        var stats = new EndGameStats(playerWon ? "Victoire" : "Défaite", turnCount, playerAliveBoats, computerAliveBoats);
+        var stats = new EndGameStats(playerWon ? "Victory" : "Defeat", turnCount, playerAliveBoats, computerAliveBoats);
         navigation.showEndGame(stats);
     }
 
@@ -247,13 +247,13 @@ public class GameController implements IGameController, IGameControllerCoordinat
                         log("Sonar indisponible.");
                     }
                 } else {
-                    log("Sonar détecte " + result.value() + " cibles potentielles.");
+                    log("Sonar detects " + result.value() + " potential targets.");
                 }
                 return;
             }
             var outcome = switch (result.primaryOutcome()) {
-                case TRAP_TRIGGERED -> "Piège déclenché";
-                case ACQUIRED_WEAPON -> "Bonus récupéré";
+                case TRAP_TRIGGERED -> "Trap triggered";
+                case ACQUIRED_WEAPON -> "Bonus acquired";
                 default -> result.primaryOutcome().toString();
             };
             log("Tir " + result.type() + " : " + outcome);
@@ -273,7 +273,7 @@ public class GameController implements IGameController, IGameControllerCoordinat
     @Override
     public void onTornadoEffect(Coordinates coords) {
         uiExecutor.execute(() -> {
-            log("Tornade déclenchée sur " + (coords != null ? coords.toFormattedString() : "?"));
+            log("Tornado triggered at " + (coords != null ? coords.toFormattedString() : "?"));
             refreshView();
         });
     }
@@ -287,7 +287,7 @@ public class GameController implements IGameController, IGameControllerCoordinat
     /** Notifie un déclenchement de trou noir. */
     @Override
     public void onBlackHoleTrigger() {
-        uiExecutor.execute(() -> log("Trou noir déclenché"));
+        uiExecutor.execute(() -> log("Black hole triggered"));
     }
 
     /** Notifie un retour de trou noir. */
@@ -302,7 +302,7 @@ public class GameController implements IGameController, IGameControllerCoordinat
     /** Notifie l'absorption d'un trou noir. */
     @Override
     public void onBlackHoleAbsorbed(Coordinates coords) {
-        uiExecutor.execute(() -> log("Trou noir absorbé sur " + (coords != null ? coords.toFormattedString() : "?")));
+        uiExecutor.execute(() -> log("Black hole absorbed at " + (coords != null ? coords.toFormattedString() : "?")));
     }
 
     /** Notifie l'obtention d'une bombe. */

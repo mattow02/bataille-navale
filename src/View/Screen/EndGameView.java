@@ -30,7 +30,7 @@ public class EndGameView implements GameView {
         resultLabel.setFont(new Font("Arial", Font.BOLD, 24));
         resultLabel.setBorder(new EmptyBorder(20, 0, 20, 0));
 
-        if (stats.resultMessage().contains("GAGNÉ")) {
+        if (stats.resultMessage().contains("VICTORY")) {
             resultLabel.setForeground(new Color(34, 139, 34));
         } else {
             resultLabel.setForeground(Color.RED);
@@ -41,19 +41,19 @@ public class EndGameView implements GameView {
         statsPanel.setLayout(new BoxLayout(statsPanel, BoxLayout.Y_AXIS));
         statsPanel.setBorder(new EmptyBorder(10, 40, 10, 40));
 
-        addStatLabel(statsPanel, "Durée de la bataille : " + stats.turnCount() + " tours");
+        addStatLabel(statsPanel, "Battle duration: " + stats.turnCount() + " turns");
         statsPanel.add(Box.createRigidArea(new Dimension(0, 15)));
 
         addStatLabel(statsPanel, "--- Bilan des Flottes ---");
-        addStatLabel(statsPanel, "Vos navires rescapés : " + stats.playerAliveBoats());
+        addStatLabel(statsPanel, "Your surviving ships: " + stats.playerAliveBoats());
         addStatLabel(statsPanel, "Navires ennemis restants : " + stats.computerAliveBoats());
 
         statsPanel.add(Box.createRigidArea(new Dimension(0, 15)));
 
         String comment;
-        if (stats.playerAliveBoats() == 0) comment = "Votre flotte gît au fond de l'océan...";
+        if (stats.playerAliveBoats() == 0) comment = "Your fleet lies at the bottom of the ocean...";
         else if (stats.playerAliveBoats() == 5) comment = "Victoire parfaite ! Aucun navire perdu.";
-        else comment = "Une bataille acharnée !";
+        else comment = "A fierce battle!";
 
         var commentLabel = new JLabel("<html><i>" + comment + "</i></html>");
         commentLabel.setAlignmentX(Component.CENTER_ALIGNMENT);

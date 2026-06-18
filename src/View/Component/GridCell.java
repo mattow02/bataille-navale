@@ -28,8 +28,8 @@ public class GridCell {
             case MISS -> Color.WHITE;
             case SUNK -> Color.BLACK;
             case ISLAND -> new Color(139, 69, 19);
-            case EXPLORED -> new Color(205, 133, 63); // île explorée sans objet
-            case ITEM_FOUND -> Color.GREEN;           // objet découvert sur l'île
+            case EXPLORED -> new Color(205, 133, 63); // explored island tile
+            case ITEM_FOUND -> Color.GREEN;           // item discovered on island
             default -> Color.MAGENTA;
         };
         cellPanel.setBackground(color);

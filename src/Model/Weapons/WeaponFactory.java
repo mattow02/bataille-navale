@@ -42,7 +42,7 @@ public class WeaponFactory {
     public Weapon create(WeaponType type) {
         var supplier = registry.get(type);
         if (supplier == null) {
-            throw new IllegalArgumentException("Type d'arme non supporté ou non enregistré : " + type);
+            throw new IllegalArgumentException("Unsupported or unregistered weapon type: " + type);
         }
         return supplier.get();
     }

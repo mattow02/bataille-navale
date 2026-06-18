@@ -70,7 +70,7 @@ public class InfoPanel extends JPanel {
                 "💣 Bombes : " + info.bombCount() + "<br/>" +
                 "📡 Sonars : " + info.sonarCount() + "</html>";
         inventoryLabel.setText(invText);
-        playerBoatsLabel.setText("Vos navires rescapés : " + info.playerAliveBoats());
+        playerBoatsLabel.setText("Your surviving ships: " + info.playerAliveBoats());
         enemyBoatsLabel.setText("Navires ennemis : " + info.enemyAliveBoats());
     }
 

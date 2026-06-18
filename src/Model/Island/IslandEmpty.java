@@ -20,7 +20,7 @@ public class IslandEmpty implements IslandItem, SpecialEffectEntity {
 
     @Override
     public String getDisplayName() {
-        return "Zone Explorée";
+        return "Explored Zone";
     }
 
     @Override

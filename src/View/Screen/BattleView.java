@@ -37,7 +37,7 @@ public class BattleView implements BattleViewInterface {
 
     @Override
     public void display() {
-        frame = new JFrame("Bataille Navale - Mode Avancé");
+        frame = new JFrame("Battleship - Advanced Mode");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
 

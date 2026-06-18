@@ -50,24 +50,24 @@ public class ConfigurationView implements GameView {
         addBoatSelection(configPanel, boatTypes);
 
         configPanel.add(Box.createRigidArea(new Dimension(0, 20)));
-        islandModeCheckBox = new JCheckBox("Activer le Mode Île (Zone 4x4, items spéciaux)");
+        islandModeCheckBox = new JCheckBox("Enable Island Mode (4x4 zone, special items)");
         islandModeCheckBox.setAlignmentX(Component.CENTER_ALIGNMENT);
         configPanel.add(islandModeCheckBox);
 
         configPanel.add(Box.createRigidArea(new Dimension(0, 10)));
-        easyModeCheckBox = new JCheckBox("IA Facile (Tirs 100% aléatoires)");
+        easyModeCheckBox = new JCheckBox("Easy AI (100% random shots)");
         easyModeCheckBox.setAlignmentX(Component.CENTER_ALIGNMENT);
         configPanel.add(easyModeCheckBox);
 
         configPanel.add(Box.createRigidArea(new Dimension(0, 20)));
 
-        counterLabel = new JLabel("Cases utilisées: 0/35", JLabel.CENTER);
+        counterLabel = new JLabel("Cells used: 0/35", JLabel.CENTER);
         counterLabel.setFont(new Font("Arial", Font.BOLD, 14));
         configPanel.add(counterLabel);
 
         var buttonPanel = new JPanel();
-        var startButton = new JButton("Démarrer la Partie");
-        var defaultButton = new JButton("Configuration Par Défaut");
+        var startButton = new JButton("Start Game");
+        var defaultButton = new JButton("Default Configuration");
 
         startButton.addActionListener(e -> startGame());
         defaultButton.addActionListener(e -> setDefaultConfiguration(counterLabel));
@@ -122,7 +122,7 @@ public class ConfigurationView implements GameView {
     private void updateCellCounter(JLabel counterLabel) {
         var boatCounts = collectBoatCounts();
         var totalCells = controller.calculateTotalCells(boatCounts);
-        counterLabel.setText("Cases utilisées: " + totalCells + "/35");
+        counterLabel.setText("Cells used: " + totalCells + "/35");
         counterLabel.setForeground(totalCells > 35 ? Color.RED : Color.BLACK);
     }
 

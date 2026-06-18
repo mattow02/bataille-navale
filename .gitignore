@@ -1,13 +1,23 @@
+# Build
+*.class
 out/
 output/
+bin/
+build/
+
+# IDE
 .idea/
 .idea_modules/
 *.iml
-*-eps-converted-to.pdf
-*.class
-*.log
 modules.xml
 .vscode/
 .history/
 .history
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Misc
+*.log
+*-eps-converted-to.pdf

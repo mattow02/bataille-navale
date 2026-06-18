@@ -10,10 +10,16 @@ import View.Screen.SwingViewFactory;
 
 import javax.swing.SwingUtilities;
 
-/** Lance l'application principale. */
+/**
+ * Application entry point for the Battleship game.
+ * Initializes all factories and launches the game controller on the Swing EDT.
+ */
 public class App {
 
-    /** Démarre l'application en initialisant le contrôleur de jeu. */
+    /**
+     * Creates the game infrastructure (factories, game model, controller)
+     * and starts the application on the Swing Event Dispatch Thread.
+     */
     public static void main(String[] args) {
         var playerFactory = new StandardPlayerFactory();
         var gridInitializer = RandomGridInitializer.withDefaults();

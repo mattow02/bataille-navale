@@ -72,7 +72,7 @@ public record ConfigurationController(IGameControllerCoordinator mainController)
                 var type = BoatType.valueOf(entry.getKey());
                 boatCounts.put(type, entry.getValue() != null ? entry.getValue() : 0);
             } catch (IllegalArgumentException e) {
-                System.err.println("Type de bateau inconnu reçu de la vue : " + entry.getKey());
+                System.err.println("Unknown boat type received from view: " + entry.getKey());
             }
         }
         return boatCounts;

@@ -31,7 +31,7 @@ public class BlackHole implements SpecialEffectEntity {
 
     @Override
     public String getDisplayName() {
-        return "Trou Noir (Piège)";
+        return "Black Hole (Trap)";
     }
 
     @Override

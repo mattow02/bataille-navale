@@ -27,7 +27,7 @@ public class SimpleBoatFactory implements BoatFactory {
     public Boat create(BoatType type) {
         var supplier = boatRegistry.get(type);
         if (supplier == null) {
-            throw new IllegalArgumentException("Type de bateau non supporté : " + type);
+            throw new IllegalArgumentException("Unsupported boat type: " + type);
         }
         return supplier.get();
     }

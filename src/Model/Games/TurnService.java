@@ -211,7 +211,7 @@ public class TurnService {
         if (entity != null) {
             entity.applySpecialEffectIfPresent(effectContext, target, isHumanAttacker);
         }
-        // Après récupération (piège ou bonus), on laisse une trace "explorée" sur l'île.
+        // After retrieval (trap or bonus), leave an "explored" trace on the island.
         if (wasIslandCell) {
             grid.placeIslandEntity(new Model.Island.IslandEmpty(), target);
         }

@@ -26,7 +26,7 @@ public class Tornado implements SpecialEffectEntity {
 
     @Override
     public String getDisplayName() {
-        return "Tornade (Piège)";
+        return "Tornado (Trap)";
     }
 
     @Override
