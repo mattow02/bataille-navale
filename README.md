@@ -12,7 +12,7 @@ A full-featured Battleship game built in Java 17 with strict MVC architecture, a
 
 - **10×10 grid** with collision-aware ship placement.
 - **Two modes:** Classic (scattered traps) and Island (central 4×4 zone with hidden bonuses and traps).
-- **Arsenal:** standard missile (unlimited), bomb (5-cell cross pattern), sonar (3×3 scan — requires a living submarine).
+- **Arsenal:** standard missile (unlimited), bomb (5-cell cross pattern), sonar (3×3 scan, requires a living submarine).
 - **Traps:** Tornado (offsets shots by +5 for 3 turns) and Black Hole (reflects a shot back at the attacker).
 - **Configurable AI:** Easy (fully random) or Standard (switches to targeted hunting after a hit).
 - Full Swing interface: configuration, interactive placement, real-time battle with event log.
@@ -28,13 +28,13 @@ A full-featured Battleship game built in Java 17 with strict MVC architecture, a
 
 ### Island mode
 1. A 4×4 island zone blocks ship placement on both sides.
-2. The enemy island hides bonuses (Bomb, Sonar) and traps — explore it to collect them.
-3. No starting special ammo — everything must be found.
+2. The enemy island hides bonuses (Bomb, Sonar) and traps, explore it to collect them.
+3. No starting special ammo, everything must be found.
 
 ### Flow
-1. **Configure** — pick ship count (0–3 per type, max 35 cells), mode, and AI level.
-2. **Place** — position ships and traps on your grid. Use "Rotate" to toggle orientation.
-3. **Battle** — select a weapon, click the enemy grid, repeat until one fleet is sunk.
+1. **Configure**, pick ship count (0–3 per type, max 35 cells), mode, and AI level.
+2. **Place**, position ships and traps on your grid. Use "Rotate" to toggle orientation.
+3. **Battle**, select a weapon, click the enemy grid, repeat until one fleet is sunk.
 
 ---
 
@@ -57,10 +57,10 @@ Or open the project in IntelliJ/Eclipse and run `App.java`.
 
 Strict **MVC** with the following design patterns:
 
-- **Observer** — view/controller notifications on game events.
-- **Strategy** — AI behavior (`RandomShotStrategy`, `TargetedShotStrategy`) and weapon selection.
-- **Factory** — ships, traps, weapons, island items.
-- **State** — cell and entity state management.
+- **Observer**, view/controller notifications on game events.
+- **Strategy**, AI behavior (`RandomShotStrategy`, `TargetedShotStrategy`) and weapon selection.
+- **Factory**, ships, traps, weapons, island items.
+- **State**, cell and entity state management.
 
 ```
 Model       Grid logic, ships, weapons, traps, turn management
