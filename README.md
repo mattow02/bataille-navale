@@ -11,6 +11,9 @@ A full-featured Battleship game built in Java 17 with strict MVC architecture, a
 > **Coursework.** Project of the BUT Informatique at IUT Robert Schuman,
 > Strasbourg. Written in 2025, over about two months.
 
+> **Coursework.** Project of the BUT Informatique at IUT Robert Schuman,
+> Strasbourg. Written in 2025, over about two months.
+
 ## Features
 
 - **10×10 grid** with collision-aware ship placement.
