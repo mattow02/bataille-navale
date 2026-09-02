@@ -21,3 +21,6 @@ Thumbs.db
 # Misc
 *.log
 *-eps-converted-to.pdf
+
+# --- macOS ---
+.DS_Store
