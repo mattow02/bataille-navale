@@ -49,8 +49,8 @@ A full-featured Battleship game built in Java 17 with strict MVC architecture, a
 **Requirements:** JDK 17+
 
 ```bash
-git clone https://github.com/mattow02/bataille-navale-v2.git
-cd bataille-navale-v2
+git clone https://github.com/mattow02/bataille-navale.git
+cd bataille-navale
 find src -name '*.java' > sources.txt
 javac -d bin @sources.txt
 java -cp bin App
